@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo "Building phases starts"
+      - mvn clean package
+  post_build:
+    commands:
+      - echo "building phase completed"
+
+artifacts:
+  files:
+    - target/ChatApplication-0.0.1-SNAPSHOT.jar
+  discard-paths: yes
